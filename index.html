@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لطفي للمعلوميات</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>لطفي للمعلوميات</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>مرحبًا بكم في لطفي للمعلوميات</h2>
+        <p>نقدم لكم أفضل الحلول التكنولوجية لتطوير أعمالكم.</p>
+        <button id="learnMore">تعرف على المزيد</button>
+    </section>
+
+    <section id="services">
+        <h2>خدماتنا</h2>
+        <div class="service-box">
+            <h3>تصميم المواقع</h3>
+            <p>نقوم بإنشاء مواقع احترافية ومتجاوبة مع جميع الأجهزة.</p>
+        </div>
+        <div class="service-box">
+            <h3>برمجة التطبيقات</h3>
+            <p>تطوير تطبيقات قوية لأنظمة أندرويد و iOS.</p>
+        </div>
+        <div class="service-box">
+            <h3>الحماية والأمان</h3>
+            <p>تأمين بياناتك وموقعك ضد الهجمات الإلكترونية.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>من نحن؟</h2>
+        <p>لطفي للمعلوميات هي شركة متخصصة في تطوير البرمجيات وحلول تكنولوجيا المعلومات.</p>
+    </section>
+
+    <section id="contact">
+        <h2>اتصل بنا</h2>
+        <p>يمكنكم التواصل معنا عبر البريد الإلكتروني أو الهاتف.</p>
+        <form id="contactForm">
+            <input type="text" placeholder="الاسم" required>
+            <input type="email" placeholder="البريد الإلكتروني" required>
+            <textarea placeholder="رسالتك" required></textarea>
+            <button type="submit">إرسال</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 لطفي للمعلوميات - جميع الحقوق محفوظة.</p>
+    </footer>
+
+</body>
+</html>
+<section id="login">
+    <h2>تسجيل الدخول / إنشاء حساب</h2>
+    <div id="userSection">
+        <p id="welcomeMessage"></p>
+        <button id="logoutBtn" style="display:none;">تسجيل الخروج</button>
+    </div>
+
+    <div id="authForms">
+        <form id="registerForm">
+            <h3>إنشاء حساب</h3>
+            <input type="text" id="registerName" placeholder="الاسم" required>
+            <input type="email" id="registerEmail" placeholder="البريد الإلكتروني" required>
+            <input type="password" id="registerPassword" placeholder="كلمة المرور" required>
+            <button type="submit">تسجيل</button>
+        </form>
+
+        <form id="loginForm">
+            <h3>تسجيل الدخول</h3>
+            <input type="email" id="loginEmail" placeholder="البريد الإلكتروني" required>
+            <input type="password" id="loginPassword" placeholder="كلمة المرور" required>
+            <button type="submit">دخول</button>
+        </form>
+    </div>
+</section>
+<section id="contact">
+    <h2>اتصل بنا</h2>
+    <p>يمكنك التواصل معنا عبر:</p>
+    <ul>
+        <li>📧 البريد الإلكتروني: <a href="mailto:contact@lotfi.com">contact@lotfi.com</a></li>
+        <li>📞 الهاتف: <a href="tel:+212600000000">+212 600 000 000</a></li>
+        <li>📲 واتساب: <a href="https://wa.me/212600000000" target="_blank">اضغط هنا للمراسلة</a></li>
+    </ul>
+</section>
+<section id="services">
+    <h2>خدماتنا</h2>
+    <div class="service-container">
+        <div class="service">
+            <h3>تصميم مواقع إلكترونية</h3>
+            <p>نقدم حلول متكاملة لتصميم وتطوير المواقع الإلكترونية بجودة عالية.</p>
+            <button class="service-btn" onclick="bookService('تصميم مواقع إلكترونية')">احجز الآن</button>
+        </div>
+        
+        <div class="service">
+            <h3>تحسين محركات البحث (SEO)</h3>
+            <p>رفع ترتيب موقعك على محركات البحث لضمان ظهور أفضل في نتائج البحث.</p>
+            <button class="service-btn" onclick="bookService('تحسين محركات البحث (SEO)')">احجز الآن</button>
+        </div>
+        
+        <div class="service">
+            <h3>إدارة الحملات الإعلانية</h3>
+            <p>إعداد وإدارة حملات إعلانية فعالة على جوجل وفيسبوك لتحقيق أفضل النتائج.</p>
+            <button class="service-btn" onclick="bookService('إدارة الحملات الإعلانية')">احجز الآن</button>
+        </div>
+    </div>
+</section>
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>حجز خدمة</h2>
+        <p id="selectedService"></p>
+        <input type="text" id="clientName" placeholder="الاسم الكامل" required>
+        <input type="email" id="clientEmail" placeholder="البريد الإلكتروني" required>
+        <button onclick="submitBooking()">إرسال الطلب</button>
+    </div>
+</div>
+<header>
+    <div class="contact-info">
+        <p>📧 البريد الإلكتروني: <a href="mailto:lotfitoumi421@gmail.com">lotfitoumi421@gmail.com</a></p>
+        <p>📞 الهاتف: <a href="tel:+213559175010">0559175010</a></p>
+    </div>
+</header>
+<section id="contact">
+    <h2>تواصل معنا</h2>
+    <p>إذا كان لديك أي استفسار، لا تتردد في التواصل معنا عبر البريد الإلكتروني أو الهاتف.</p>
+    <p>📧 البريد الإلكتروني: <a href="mailto:lotfitoumi421@gmail.com">lotfitoumi421@gmail.com</a></p>
+    <p>📞 الهاتف: <a href="tel:+213559175010">0559175010</a></p>
+</section>
+<section id="services">
+    <h2>خدماتنا</h2>
+    <div class="service">
+        <h3>🔹 علم الحاسوب</h3>
+        <p>نقدم مقالات ودروساً في مجال علم الحاسوب، بما في ذلك البرمجة، الشبكات، والذكاء الاصطناعي.</p>
+    </div>
+
+    <div class="service">
+        <h3>🔹 الأمن السيبراني وحماية البيانات</h3>
+        <p>تعلم كيفية تأمين جهازك ضد الاختراقات، وفهم أساسيات الحماية مثل كلمات المرور القوية، والجدران النارية، وبرامج مكافحة الفيروسات.</p>
+    </div>
+
+    <div class="service">
+        <h3>🔹 التعامل مع الحاسوب</h3>
+        <p>إرشادات حول صيانة الحواسيب، وتحسين الأداء، وإصلاح المشاكل الشائعة.</p>
+    </div>
+</section>
+<section id="learn-more">
+    <h2>📚 تعلم المزيد</h2>
+    <ul>
+        <li><a href="https://cybersecurityguide.org/" target="_blank">مقدمة إلى الأمن السيبراني</a></li>
+        <li><a href="https://www.w3schools.com/" target="_blank">تعلم البرمجة مجانًا</a></li>
+        <li><a href="https://www.computerhope.com/" target="_blank">دليل إصلاح مشاكل الحاسوب</a></li>
+    </ul>
+</section>
+<section id="services">
+    <h2>💻 خدماتنا</h2>
+
+    <div class="service-container">
+
+        <div class="service">
+            <h3>🔹 علم الحاسوب</h3>
+            <p>نقدم دورات متخصصة في أساسيات الحاسوب، البرمجة، الذكاء الاصطناعي، وأنظمة التشغيل.</p>
+            <button class="service-btn" onclick="bookService('علم الحاسوب')">احجز الآن</button>
+        </div>
+
+        <div class="service">
+            <h3>🔹 الأمن السيبراني وحماية الأجهزة</h3>
+            <p>تعلم كيفية تأمين بياناتك وحماية أجهزتك من الفيروسات والاختراقات.</p>
+            <button class="service-btn" onclick="bookService('الأمن السيبراني')">احجز الآن</button>
+        </div>
+
+        <div class="service">
+            <h3>🔹 التعامل مع الحاسوب</h3>
+            <p>إرشادات حول تحسين أداء الحاسوب، إصلاح الأعطال الشائعة، وصيانة الأجهزة.</p>
+            <button class="service-btn" onclick="bookService('التعامل مع الحاسوب')">احجز الآن</button>
+        </div>
+
+    </div>
+</section>
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>📩 احجز خدمة</h2>
+        <p id="selectedService"></p>
+        <input type="text" id="clientName" placeholder="الاسم الكامل" required>
+        <input type="email" id="clientEmail" placeholder="البريد الإلكتروني" required>
+        <button onclick="submitBooking()">إرسال الطلب</button>
+    </div>
+</div>
+<section id="contact">
+    <h2>📞 تواصل معنا</h2>
+    <p>📧 البريد الإلكتروني: <a href="mailto:lotfitoumi421@gmail.com">lotfitoumi421@gmail.com</a></p>
+    <p>📞 الهاتف: <a href="tel:+213559175010">0559175010</a></p>
+</section>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لطفي للمعلوميات - موسوعة الحواسيب</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>📚 لطفي للمعلوميات</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">🏠 الصفحة الرئيسية</a></li>
+                <li><a href="cybersecurity.html">🔐 الأمن السيبراني</a></li>
+                <li><
+                    <!DOCTYPE html>
+                    <html lang="ar">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>لطفي للمعلوميات - موسوعة الحواسيب</title>
+                        <link rel="stylesheet" href="styles.css">
+                    </head>
+                    <body>
+                    
+                        <header>
+                            <h1>📚 لطفي للمعلوميات</h1>
+                            <nav>
+                                <ul>
+                                    <li><a href="index.html">🏠 الصفحة الرئيسية</a></li>
+                                    <li><a href="cybersecurity.html">🔐 الأمن السيبراني</a></li>
+                                    <li><a href="computerscience.html">💻 علم الحاسوب</a></li>
+                                    <li><a href="contact.html">📞 تواصل معنا</a></li>
+                                </ul>
+                            </nav>
+                        </header>
+                    
+                        <main>
+                            <h2>مرحبًا بك في موسوعة لطفي للمعلوميات!</h2>
+                            <p>هنا ستجد مقالات متخصصة حول الأمن السيبراني وعلم الحاسوب. اختر أي قسم من القائمة أعلاه لبدء التعلم.</p>
+                        </main>
+                    
+                        <footer>
+                            <p>📧 البريد الإلكتروني: <a href="mailto:lotfitoumi421@gmail.com">lotfitoumi421@gmail.com</a></p>
+                            <p>📞 الهاتف: <a href="tel:+213559175010">0559175010</a></p>
+                            <p>&copy; 2024 جميع الحقوق محفوظة.</p>
+                        </footer>
+                    
+                    </body>
+                    </html>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">🏠 الصفحة الرئيسية</a></li>
+                            <li><a href="cybersecurity.html">🔐 الأمن السيبراني</a></li>
+                            <li><a href="computerscience.html">💻 علم الحاسوب</a></li>
+                            <li><a href="services.html">🚀 خدماتنا</a></li> <!-- ✅ تمت الإضافة -->
+                            <li><a href="contact.html">📞 تواصل معنا</a></li>
+                        </ul>
+                    </nav>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">🏠 الصفحة الرئيسية</a></li>
+                            <li><a href="cybersecurity.html">🔐 الأمن السيبراني</a></li>
+                            <li><a href="computerscience.html">💻 علم الحاسوب</a></li>
+                            <li><a href="webdesign.html">🎨 تصميم مواقع</a></li> <!-- ✅ تمت الإضافة -->
+                            <li><a href="services.html">🚀 خدماتنا</a></li>
+                            <li><a href="contact.html">📞 تواصل معنا</a></li>
+                        </ul>
+                    </nav>
+                             
